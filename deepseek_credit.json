@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "deepseek-balance-checker",
+		"name": "DeepSeek API - Balance",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get User Balance",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{deepseek_api_key}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.deepseek.com/user/balance",
+					"protocol": "https",
+					"host": [
+						"api",
+						"deepseek",
+						"com"
+					],
+					"path": [
+						"user",
+						"balance"
+					]
+				},
+				"description": "Verifica il saldo residuo e i crediti disponibili sull'account DeepSeek."
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "deepseek_api_key",
+			"value": "INSERISCI_QUI_LA_TUA_API_KEY",
+			"type": "string"
+		}
+	]
+}

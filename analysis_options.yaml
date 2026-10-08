@@ -1,0 +1,47 @@
+# This file configures the analyzer and enables strict static analysis plus an
+# opinionated set of lint rules for a clean, production-ready codebase.
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
+
+  exclude:
+    - build/**
+    - android/**
+    - ios/**
+    - web/**
+    - windows/**
+    - macos/**
+    - linux/**
+
+  errors:
+    # Treat these as build-breaking so they never slip through.
+    invalid_annotation_target: ignore
+
+linter:
+  rules:
+    always_declare_return_types: true
+    avoid_dynamic_calls: true
+    avoid_empty_else: true
+    avoid_returning_null_for_void: true
+    avoid_slow_async_io: true
+    avoid_type_to_string: true
+    avoid_unnecessary_containers: true
+    avoid_void_async: true
+    cancel_subscriptions: true
+    close_sinks: true
+    comment_references: false
+    directives_ordering: true
+    prefer_const_constructors: true
+    prefer_const_constructors_in_immutables: true
+    prefer_const_declarations: true
+    prefer_final_locals: true
+    prefer_single_quotes: true
+    sized_box_for_whitespace: true
+    sort_child_properties_last: true
+    unawaited_futures: true
+    use_string_buffers: true
+    valid_regexps: true
